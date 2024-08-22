@@ -42,14 +42,14 @@ def main():
       f.close()
       return
     
-    data = res.json()
+    res = res.json()
     
-    if not data['success']:
-      f.write(f'[error ]Couldn\'t update record: {data["result"]["name"]}\n')
+    if not res['success']:
+      f.write(f'[error ]Couldn\'t update record: {res["result"]["name"]}\n')
       f.close()
       return
     
-    f.write(f'[record] {data["result"]["name"]} updated on {data["result"]["modified_on"]}\n')
+    f.write(f'[record] {res["result"]["name"]} updated on {res["result"]["modified_on"]}\n')
 
   f.write('\n')
   f.close()
