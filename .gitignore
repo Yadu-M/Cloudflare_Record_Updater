@@ -1,0 +1,8 @@
+# Package Modules
+venv/
+
+# Logs
+*.log
+
+#Env
+.env
